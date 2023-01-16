@@ -1,0 +1,88 @@
+body{
+    background: rgb(1, 29, 83);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chances{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 100px;
+    height: 50px;
+    background: #e306bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wheel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    transition:transform 3s ease-in-out;
+    overflow: hidden;
+}
+.gift{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: rgb(21, 255, 0);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 55%);
+    box-shadow: 10px 10px 100px 10px #ccc #ccc #ccc #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gift span{
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.spin{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e306bb;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000000;
+    pointer-events:fill;
+}
+.spin span{
+    position: relative;
+    transform: rotate(45deg);
+}
+.spin::before{
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    bottom: 90px;
+    background: #e306bb;
+    clip-path: polygon(50% 0%, 30% 100%, 70% 100%);
+}
