@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background: rgb(1, 29, 83);
     width: 100%;
@@ -86,3 +91,13 @@ body{
     background: #e306bb;
     clip-path: polygon(50% 0%, 30% 100%, 70% 100%);
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+      width: 350px;
+      height: 350px;
+    }
+    .chances{
+        left: auto;
+    }
+  }
